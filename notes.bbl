@@ -1,0 +1,173 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{anyt/global//global/global}
+  \entry{di2014tystemsnetworksdimers}{article}{}
+    \name{author}{1}{}{%
+      {{hash=DFP}{%
+         family={Di\bibnamedelima Francesco},
+         familyi={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={Philippe},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{DFP1}
+    \strng{fullhash}{DFP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{DF14}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{pages}{1237\bibrangedash 1270}
+    \field{title}{T-systems, networks and dimers}
+    \field{volume}{331}
+    \field{journaltitle}{Communications in Mathematical Physics}
+    \field{year}{2014}
+  \endentry
+
+  \entry{di2014arctic}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DFP}{%
+         family={Di\bibnamedelima Francesco},
+         familyi={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={Philippe},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=SGR}{%
+         family={Soto-Garrido},
+         familyi={S\bibinithyphendelim G\bibinitperiod},
+         given={Rodrigo},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IOP Publishing}%
+    }
+    \strng{namehash}{DFPSGR1}
+    \strng{fullhash}{DFPSGR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{DFSG14}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{28}
+    \field{pages}{285204}
+    \field{title}{Arctic curves of the octahedron equation}
+    \field{volume}{47}
+    \field{journaltitle}{Journal of Physics A: Mathematical and Theoretical}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Di_Francesco_2009}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FPD}{%
+         family={Francesco},
+         familyi={F\bibinitperiod},
+         given={Philippe\bibnamedelima Di},
+         giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Kedem},
+         familyi={K\bibinitperiod},
+         given={Rinat},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {Springer Science}%
+      {Business Media {LLC}}%
+    }
+    \strng{namehash}{FPDKR1}
+    \strng{fullhash}{FPDKR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{FK09}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{doi}
+    \verb 10.1007/s11005-009-0354-z
+    \endverb
+    \field{number}{3}
+    \field{pages}{183\bibrangedash 216}
+    \field{title}{Q-systems as Cluster Algebras {II}: Cartan Matrix of Finite
+  Type and the Polynomial Property}
+    \verb{url}
+    \verb https://doi.org/10.1007%2Fs11005-009-0354-z
+    \endverb
+    \field{volume}{89}
+    \field{journaltitle}{Letters in Mathematical Physics}
+    \field{year}{2009}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{kenyon2013double}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KR}{%
+         family={Kenyon},
+         familyi={K\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PR}{%
+         family={Pemantle},
+         familyi={P\bibinitperiod},
+         given={Robin},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KRPR1}
+    \strng{fullhash}{KRPR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{KP13}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Double-dimers, the Ising model and the hexahedron recurrence}
+    \field{journaltitle}{arXiv preprint arXiv:1308.2998}
+    \field{year}{2013}
+  \endentry
+
+  \entry{speyer2004perfect}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=SDE}{%
+         family={Speyer},
+         familyi={S\bibinitperiod},
+         given={David\bibnamedelima E},
+         giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SDE1}
+    \strng{fullhash}{SDE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Spe04}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{eprint}
+    \verb math/0402452
+    \endverb
+    \field{title}{Perfect Matchings and the Octahedron Recurrence}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{math.CO}
+    \field{year}{2004}
+  \endentry
+\enddatalist
+\endinput
