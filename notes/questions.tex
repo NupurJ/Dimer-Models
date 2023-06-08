@@ -1,5 +1,32 @@
 \chapter{Questions to think about}
 
+\section{General}
 \begin{enumerate}
+	\item Proof: Flips connect convex tilings in $2$ dimensions.
+	\item Box tiling problem ($2$ dimensions): Say we have $k$ rectangles with the $i$th rectangle having length $m_i$ and breadth $n_i$. We have imperfectly tiled a box with these tiles---the box is covered, but some parts of the tiles stick out. When can we extend this to a tiling of a bigger box? Assume $\gcd(m_1,\dots,m_k) = \gcd(n_1,\dots,n_k) = 1$ (Why?).\\ \textit{Simpler}: This is known for $2$ rectangles; try to arrive at the result. 
+\end{enumerate}
+\section{3 colour model}
+\begin{enumerate}
+	\item What does a random filling look like?
+	\item What does a configuration look like after a large number of random switches?
+\end{enumerate}
+
+\section{Aztecahedron}
+
+\begin{enumerate}
+	\item Run a Markov chain with flips and trits on the aztecahedron.
+\end{enumerate}
+
+\subsection{Paper \cite{hartarsky2023local}}
+\begin{enumerate}
+	\item Does Theorem \ref{thm-dynamics-3} generalise to the aztecahedron? The shape of the boundary will change things---can this be fit into a proof? Maybe code to find a counterexample.
+	\item In continuation of the above, does Theorem \ref{thm-dynamics-3} generalise to other classes of shapes? Check the inequalities more deeply to see if they can be refined for this.
+	\item Does Conjecture \ref{conj-dynamics-2} hold for the aztecahedron?
+	\item Can we also find many authorised vertices in the aztecahedron (Lemma \ref{lemma-dynamics-10})? This would allow us to look for authorised vertices (easy) instead of trits (hard). 
 	\item 
+\end{enumerate}
+
+\section{Paper \cite{hartarsky2023local}}
+\begin{enumerate}
+	\item Conjecture \ref{conj-dynamics-2}.\\ \textit{Plan:} Try for $d = 2,3,4,5$ either by hand or using a simulation.
 \end{enumerate}
