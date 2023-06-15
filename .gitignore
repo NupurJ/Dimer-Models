@@ -1,6 +1,6 @@
 # pdfs #
 *.pdf
-!*/notes/notes.pdf
+!notes/notes.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
