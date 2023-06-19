@@ -1,5 +1,5 @@
 # pdfs #
-*.pdf
+/*.pdf
 !notes/notes.pdf
 
 ## Core latex/pdflatex auxiliary files:
