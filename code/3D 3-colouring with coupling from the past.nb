@@ -1,0 +1,115 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3850,        107]
+NotebookOptionsPosition[      3305,         91]
+NotebookOutlinePosition[      3805,        108]
+CellTagsIndexPosition[      3762,        105]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["", "CodeText",ExpressionUUID->"ec0c784a-ce9d-4c5a-b232-cf84abfadbcd"],
+
+Cell[BoxData[{
+ RowBox[{"Ideas", ":", "\n", 
+  RowBox[{"-", " ", 
+   RowBox[{"ListPlot3D", "[", "]"}]}], " ", ":", " ", 
+  RowBox[{"plot", " ", "height", " ", "function"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", " ", "try"}], " ", "colours", " ", "\"\<Tomato\>\""}], ",", 
+  " ", "\"\<Gold\>\"", ",", " ", "\"\<LawnGreen\>\"", ",", " ", 
+  "\"\<SteelBlue\>\""}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", " ", 
+    RowBox[{"Image3D", "[", "]"}]}], " ", "with", " ", 
+   RowBox[{"Image3DSlices", "[", "]"}]}], ":", " ", 
+  RowBox[{"prints", " ", "all", " ", "slices"}]}], "\n", 
+ RowBox[{
+  RowBox[{"-", " ", 
+   RowBox[{"ListDensityPlot", "[", "]"}]}], ":", " ", 
+  RowBox[{
+  "useful", " ", "if", " ", "we", " ", "want", " ", "to", " ", 
+   "blur"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", " ", 
+    RowBox[{"ListContourPlot", "[", "]"}]}], ":", " ", 
+   RowBox[{"gives", " ", "contours"}]}], " "}], "\n", 
+ RowBox[{
+  RowBox[{"-", " ", 
+   RowBox[{"ListVectorPlot", "[", "]"}]}], ",", " ", 
+  RowBox[{"ListVectorPlot3D", "[", "]"}], ",", " ", 
+  RowBox[{"ListStreamPlot", "[", "]"}], ",", " ", 
+  RowBox[{"ListStreamPlot3D", "[", "]"}], ",", " ", 
+  RowBox[{
+   RowBox[{"ListSliceVectorPlot3D", "[", "]"}], ":", " ", 
+   RowBox[{"for", " ", 
+    RowBox[{"flows", "?", " ", 
+     RowBox[{"(", 
+      RowBox[{
+      "look", " ", "at", " ", "density", " ", "functions", " ", "also"}], 
+      ")"}]}]}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"-", " ", 
+   RowBox[{"ArrayPlot3D", "[", "]"}]}], ",", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Raster3D", "[", "]"}], "\n", "-", " ", 
+    RowBox[{"Graphics3D", "[", "]"}]}], ":", " ", 
+   RowBox[{
+    RowBox[{
+    "example", " ", "on", " ", "website", " ", "tells", " ", "you", " ", 
+     "how", " ", "to", " ", "space", " ", "your", " ", "cell"}], "\n", "-", 
+    " ", 
+    RowBox[{"RegionPlot3D", "[", "]"}]}], ":", " ", 
+   RowBox[{
+    RowBox[{
+    "shows", " ", "only", " ", "region", " ", "for", " ", "which", " ", 
+     "pred", " ", "is", " ", "True"}], "\n", "-", " "}]}]}]}], "Code",
+ CellChangeTimes->{{3.8961935040712976`*^9, 3.8961935381558247`*^9}, {
+  3.896194936842407*^9, 3.896194938170011*^9}, {3.8961976953367853`*^9, 
+  3.8961977638117313`*^9}, {3.896198335144771*^9, 3.896198366856309*^9}, {
+  3.8961986608628683`*^9, 3.896198674854718*^9}, {3.896198716270617*^9, 
+  3.896198716661545*^9}, {3.896198782094411*^9, 3.896198791070257*^9}, {
+  3.8961989110295343`*^9, 3.8961989204212313`*^9}, {3.896198964157205*^9, 
+  3.896198979236967*^9}, {3.89619921442766*^9, 3.896199283091106*^9}, {
+  3.896199362138769*^9, 
+  3.896199418306302*^9}},ExpressionUUID->"f15ecd80-bfeb-4108-81fd-\
+9197722539ae"]
+},
+WindowSize->{720, 711},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Linux x86 (64-bit) (January 30, 2023)",
+StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "localhome", "nupur23", 
+   "Documents"}, "DarkMode.nb", CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"270a6ccb-6f7d-468e-a73b-f1cfc65a9fc9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 75, 0, 38, "CodeText",ExpressionUUID->"ec0c784a-ce9d-4c5a-b232-cf84abfadbcd"],
+Cell[636, 22, 2665, 67, 249, "Code",ExpressionUUID->"f15ecd80-bfeb-4108-81fd-9197722539ae"]
+}
+]
+*)
+
