@@ -39,6 +39,25 @@ squaretowerbricks[n_]:=Partition[squaretower[n],2]
 
 
 
+aztecgrid[5]
+
+
+ aztecbricks[5]
+
+
+k = 5
+Catenate[Map[coordinator,Partition[Riffle[
+Table[i+1/2,{i,-k,k}],
+Join[Reverse[Table[Table[i-1/2,{i,-n+1,n}],{n,k,1,-1}]],
+Table[Table[i-1/2,{i,-n+1,n}],{n,k,1,-1}]]],2]]]
+MatrixForm[Map[coordinator,Partition[Riffle[
+Table[i+1/2,{i,-k,k}],
+Join[Reverse[Table[Table[i-1/2,{i,-n+1,n}],{n,k,1,-1}]],
+Table[Table[i-1/2,{i,-n+1,n}],{n,k,1,-1}]]],2]]]
+MatrixForm[Join[Reverse[Table[Table[i-1/2,{i,-n+1,n}],{n,k,1,-1}]],
+Table[Table[i-1/2,{i,-n+1,n}],{n,k,1,-1}]]]
+
+
 (*calculating the squares in a grid*)
 
 square[point_,vec1_,vec2_]:={point,point+vec1,point+vec1+vec2,point+vec2}
