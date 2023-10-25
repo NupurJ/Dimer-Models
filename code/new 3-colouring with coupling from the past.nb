@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    401222,       7820]
-NotebookOptionsPosition[    376236,       7311]
-NotebookOutlinePosition[    394918,       7727]
-CellTagsIndexPosition[    394875,       7724]
+NotebookDataLength[    404510,       7883]
+NotebookOptionsPosition[    379245,       7371]
+NotebookOutlinePosition[    397927,       7787]
+CellTagsIndexPosition[    397884,       7784]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3145,12 +3145,12 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`k$$ = 30, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`k$$ = 4, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`k$$], 1, 30, 1}}, Typeset`size$$ = {
-    254.25781250000003`, {96., 101.68496000000002`}}, Typeset`update$$ = 0, 
+    245.71484375000003`, {96., 101.68496000000007`}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`k$$ = 1}, 
@@ -3164,7 +3164,7 @@ Cell[BoxData[
          $CellContext`initialGridBorder[3 (2 $CellContext`k$$ - 1)]]}, 
       "Specifications" :> {{$CellContext`k$$, 1, 30, 1}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{305., {145.359375, 151.640625}},
+     ImageSizeCache->{296., {145.359375, 151.640625}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -3461,7 +3461,7 @@ Cell[BoxData[{
    RowBox[{"Module", "[", 
     RowBox[{
      RowBox[{"{", 
-      RowBox[{
+      RowBox[{"i", ",", " ", 
        RowBox[{"numSteps", " ", "=", " ", 
         RowBox[{"Length", "[", "coinTosses", "]"}]}], ",", " ", 
        RowBox[{"logInterval", " ", "=", " ", 
@@ -3490,113 +3490,128 @@ Cell[BoxData[{
        RowBox[{
        "\"\<Logging every \>\"", ",", " ", "logInterval", ",", " ", 
         "\"\< steps\>\""}], "]"}], ";", "\n", "  ", 
-      RowBox[{"Monitor", "[", "\n", "    ", 
-       RowBox[{
-        RowBox[{"For", "[", 
-         RowBox[{
-          RowBox[{"i", " ", "=", " ", "0"}], ",", " ", 
-          RowBox[{"i", " ", "<=", " ", "numSteps"}], ",", " ", 
-          RowBox[{"i", "++"}], ",", " ", 
-          RowBox[{"(", "\n", "      ", 
-           RowBox[{
-            RowBox[{"If", "[", 
-             RowBox[{
+      RowBox[{
+       RowBox[{"Catch", "[", 
+        RowBox[{
+         RowBox[{"Monitor", "[", "\n", "    ", 
+          RowBox[{
+           RowBox[{"For", "[", 
+            RowBox[{
+             RowBox[{"i", " ", "=", " ", "0"}], ",", " ", 
+             RowBox[{"i", " ", "<=", " ", "numSteps"}], ",", " ", 
+             RowBox[{"i", "++"}], ",", " ", 
+             RowBox[{"(", "\n", "      ", 
               RowBox[{
-               RowBox[{
-                RowBox[{"Mod", "[", 
-                 RowBox[{"i", ",", " ", "logInterval"}], "]"}], " ", "==", 
-                " ", "0"}], " ", "||", " ", 
-               RowBox[{
-                RowBox[{"checkHeightDifference", "[", 
-                 RowBox[{"maxGrid", ",", " ", "minGrid"}], "]"}], " ", "==", 
-                " ", "0"}]}], ",", " ", "\n", "       ", 
-              RowBox[{"(", 
-               RowBox[{
-                RowBox[{"Export", "[", 
+               RowBox[{"If", "[", 
+                RowBox[{
                  RowBox[{
-                  RowBox[{"StringJoin", "[", 
-                   RowBox[{"outDir", ",", " ", 
+                  RowBox[{
+                   RowBox[{"Mod", "[", 
+                    RowBox[{"i", ",", " ", "logInterval"}], "]"}], " ", "==", 
+                   " ", "0"}], " ", "||", " ", 
+                  RowBox[{
+                   RowBox[{"checkHeightDifference", "[", 
+                    RowBox[{"maxGrid", ",", " ", "minGrid"}], "]"}], " ", "==",
+                    " ", "0"}]}], ",", " ", "\n", "       ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"Export", "[", 
+                    RowBox[{
+                    RowBox[{"StringJoin", "[", 
+                    RowBox[{"outDir", ",", " ", 
                     RowBox[{"ToString", "[", "i", "]"}], ",", " ", 
                     "\"\<.mx\>\""}], "]"}], ",", " ", 
-                  RowBox[{"{", 
-                   RowBox[{"maxGrid", ",", " ", "minGrid"}], "}"}]}], "]"}], 
-                ";", "\n", "        ", 
-                RowBox[{
-                 RowBox[{"{", 
-                  RowBox[{"tempMinGrid", ",", " ", "tempMaxGrid"}], "}"}], 
-                 " ", "=", " ", 
-                 RowBox[{"{", 
-                  RowBox[{"minGrid", ",", " ", "maxGrid"}], "}"}]}], ";", 
-                "\n", "        ", 
-                RowBox[{"tempHeightDifference", " ", "=", " ", 
-                 RowBox[{"checkHeightDifference", "[", 
-                  RowBox[{"tempMinGrid", ",", " ", "tempMaxGrid"}], "]"}]}], 
-                ";", "\n", "        ", 
-                RowBox[{"tempStepNumber", " ", "=", " ", "i"}], ";"}], "\n", 
-               "        ", 
+                    RowBox[{"{", 
+                    RowBox[{"maxGrid", ",", " ", "minGrid"}], "}"}]}], "]"}], 
+                   ";", "\n", "        ", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"tempMinGrid", ",", " ", "tempMaxGrid"}], "}"}], 
+                    " ", "=", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"minGrid", ",", " ", "maxGrid"}], "}"}]}], ";", 
+                   "\n", "        ", 
+                   RowBox[{"tempHeightDifference", " ", "=", " ", 
+                    RowBox[{"checkHeightDifference", "[", 
+                    RowBox[{"tempMinGrid", ",", " ", "tempMaxGrid"}], "]"}]}],
+                    ";", "\n", "        ", 
+                   RowBox[{"tempStepNumber", " ", "=", " ", "i"}], ";"}], 
+                  "\n", "        ", 
+                  RowBox[{"(*", " ", 
+                   RowBox[{
+                   "WHAT", " ", "IS", " ", "THIS", " ", "LINE", " ", "DOING", 
+                    " ", 
+                    RowBox[{"HERE", "?"}]}], " ", "*)"}], "\n", "        ", 
+                  RowBox[{"(*", 
+                   RowBox[{
+                    RowBox[{"displayGrids", "[", 
+                    RowBox[{
+                    "tempMaxGrid", ",", " ", "tempMinGrid", ",", " ", 
+                    "blueColourRules"}], "]"}], ";"}], "*)"}], "\n", 
+                  "        ", ")"}]}], "\n", "      ", "]"}], ";", "\n", 
+               "      ", 
                RowBox[{"(*", " ", 
                 RowBox[{
-                "WHAT", " ", "IS", " ", "THIS", " ", "LINE", " ", "DOING", 
-                 " ", 
-                 RowBox[{"HERE", "?"}]}], " ", "*)"}], "\n", "        ", 
-               RowBox[{"(*", 
-                RowBox[{
-                 RowBox[{"displayGrids", "[", 
+                 RowBox[{"OPTIMISATION", ":", " ", 
                   RowBox[{
-                  "tempMaxGrid", ",", " ", "tempMinGrid", ",", " ", 
-                   "blueColourRules"}], "]"}], ";"}], "*)"}], "\n", 
-               "        ", ")"}]}], "\n", "      ", "]"}], ";", "\n", 
-            "      ", 
-            RowBox[{"(*", " ", 
+                   RowBox[{"don", "'"}], "t", " ", "need", " ", "to", " ", 
+                   "check", " ", "height", " ", "difference", " ", "each", 
+                   " ", 
+                   RowBox[{"time", ".", " ", "If"}], " ", "difference", " ", 
+                   "is", " ", "1000"}]}], ",", " ", 
+                 RowBox[{
+                 "only", " ", "need", " ", "to", " ", "check", " ", "again", 
+                  " ", "after", " ", "500", " ", "steps"}]}], "*)"}], "\n", 
+               "      ", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"checkHeightDifference", "[", 
+                   RowBox[{"maxGrid", ",", " ", "minGrid"}], "]"}], " ", "==",
+                   " ", "0"}], ",", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                   "Print", "[", "\"\<The process should terminate now.\>\"", 
+                    "]"}], ";", " ", 
+                   RowBox[{"Throw", "[", "1", "]"}]}], ")"}]}], "]"}], ";", 
+               "\n", "      ", "\n", "      ", 
+               RowBox[{"oneStep", "[", 
+                RowBox[{
+                 RowBox[{"coinTosses", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+                 RowBox[{"sites", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ";"}], ")"}]}], 
+            "\n", "    ", "]"}], ",", " ", "\n", "    ", 
+           RowBox[{"Grid", "[", 
+            RowBox[{"{", 
              RowBox[{
-              RowBox[{"OPTIMISATION", ":", " ", 
-               RowBox[{
-                RowBox[{"don", "'"}], "t", " ", "need", " ", "to", " ", 
-                "check", " ", "height", " ", "difference", " ", "each", " ", 
-                RowBox[{"time", ".", " ", "If"}], " ", "difference", " ", 
-                "is", " ", "1000"}]}], ",", " ", 
-              RowBox[{
-              "only", " ", "need", " ", "to", " ", "check", " ", "again", " ",
-                "after", " ", "500", " ", "steps"}]}], "*)"}], "\n", "      ", 
-            RowBox[{"If", "[", 
-             RowBox[{
-              RowBox[{
-               RowBox[{"checkHeightDifference", "[", 
-                RowBox[{"maxGrid", ",", " ", "minGrid"}], "]"}], " ", "==", 
-               " ", "0"}], ",", " ", 
-              RowBox[{"Return", "[", "1", "]"}]}], "]"}], ";", "\n", "      ",
-             "\n", "      ", 
-            RowBox[{"oneStep", "[", 
-             RowBox[{
-              RowBox[{"coinTosses", "[", 
-               RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
-              RowBox[{"sites", "[", 
-               RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ";"}], ")"}]}], "\n", 
-         "    ", "]"}], ",", " ", "\n", "    ", 
-        RowBox[{"Grid", "[", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"StringJoin", "[", 
-             RowBox[{"\"\<Current step: \>\"", ",", " ", 
-              RowBox[{"ToString", "[", "tempStepNumber", "]"}]}], "]"}], 
-            "}"}], ",", " ", "\n", "          ", 
-           RowBox[{"{", 
-            RowBox[{"StringJoin", "[", 
-             RowBox[{"\"\<Height difference: \>\"", ",", " ", 
-              RowBox[{"ToString", "[", "tempHeightDifference", "]"}]}], "]"}],
-             "}"}], ",", " ", "\n", "          ", 
-           RowBox[{"{", 
-            RowBox[{"displayGrids", "[", 
-             RowBox[{
-             "tempMaxGrid", ",", " ", "tempMinGrid", ",", " ", 
-              "blueColourRules"}], "]"}], "}"}]}], "}"}], "\n", "    ", 
-         "]"}]}], "\n", "  ", "]"}], ";", "\n", "  ", 
-      RowBox[{"Print", "[", 
+              RowBox[{"{", 
+               RowBox[{"StringJoin", "[", 
+                RowBox[{"\"\<Current step: \>\"", ",", " ", 
+                 RowBox[{"ToString", "[", "tempStepNumber", "]"}]}], "]"}], 
+               "}"}], ",", " ", "\n", "          ", 
+              RowBox[{"{", 
+               RowBox[{"StringJoin", "[", 
+                RowBox[{"\"\<Height difference: \>\"", ",", " ", 
+                 RowBox[{"ToString", "[", "tempHeightDifference", "]"}]}], 
+                "]"}], "}"}], ",", " ", "\n", "          ", 
+              RowBox[{"{", 
+               RowBox[{"displayGrids", "[", 
+                RowBox[{
+                "tempMaxGrid", ",", " ", "tempMinGrid", ",", " ", 
+                 "blueColourRules"}], "]"}], "}"}]}], "}"}], "\n", "    ", 
+            "]"}]}], "\n", "  ", "]"}], ";"}], "]"}], "\n", "  ", "\n", "  ", 
+       "\n", "  ", 
+       RowBox[{"Print", "[", 
+        RowBox[{
+        "\"\<-- The height difference after \>\"", ",", " ", "i", ",", " ", 
+         "\"\< steps was \>\"", ",", " ", "tempHeightDifference", ",", " ", 
+         "\"\<.\>\""}], "]"}]}], ";", "\n", "  ", 
+      RowBox[{"If", "[", 
        RowBox[{
-       "\"\<-- The height difference after \>\"", ",", " ", "numSteps", ",", 
-        " ", "\"\< was \>\"", ",", " ", "tempHeightDifference", ",", " ", 
-        "\"\<.\>\""}], "]"}], ";", "\n", "  ", 
+        RowBox[{"tempHeightDifference", " ", "==", " ", "0"}], ",", " ", 
+        RowBox[{"Return", "[", "1", "]"}]}], "]"}], ";", "\n", "  ", 
       RowBox[{"Return", "[", "0", "]"}], ";"}]}], "\n", "]"}]}], "\n", 
   "\n"}], "\n", 
  RowBox[{
@@ -3664,8 +3679,12 @@ Cell[BoxData[{
            ",", " ", "coinTosses", ",", " ", "\"\<CSV\>\""}], "]"}], ";", 
          "\n", "\t\t", "\n", "\t    ", 
          RowBox[{"converged", " ", "=", " ", 
-          RowBox[{"nStepsMarkovChain", "[", "]"}]}], ";"}], "\n", "\t", 
-        ")"}]}], "]"}], ";", "\n", "\t", "\n", "\t", 
+          RowBox[{"nStepsMarkovChain", "[", "]"}]}], ";", "\n", "\t    ", 
+         RowBox[{"Print", "[", "converged", "]"}], ";", "\n", "\t    ", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"converged", " ", "==", " ", "1"}], ",", " ", "Break"}], 
+          "]"}]}], "\n", "\t", ")"}]}], "]"}], ";", "\n", "\t", "\n", "\t", 
      RowBox[{"Print", "[", 
       RowBox[{
       "\"\<The chain took \>\"", ",", " ", "steps", ",", " ", 
@@ -3702,8 +3721,11 @@ Cell[BoxData[{
    3.907220473315723*^9}, 3.90722407160929*^9, {3.907224437230711*^9, 
    3.907224451539872*^9}, {3.907224573530612*^9, 3.907224579507307*^9}, {
    3.907224701219678*^9, 3.907224724665305*^9}, {3.90722494170328*^9, 
-   3.9072249747133017`*^9}},ExpressionUUID->"26a7099b-d8c0-45e4-aea9-\
-5dfb5beb1f6b"],
+   3.9072249747133017`*^9}, {3.907225739381671*^9, 3.9072259351403837`*^9}, {
+   3.90722610383753*^9, 3.907226117157135*^9}, {3.907226152139142*^9, 
+   3.9072261796919823`*^9}},
+ CellLabel->
+  "In[189]:=",ExpressionUUID->"26a7099b-d8c0-45e4-aea9-5dfb5beb1f6b"],
 
 Cell["\<\
 Global Variables:
@@ -4369,7 +4391,7 @@ Cell[BoxData[""], "Code",
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"dim", " ", "=", " ", "11"}], ";"}], "\n", 
+  RowBox[{"dim", " ", "=", " ", "15"}], ";"}], "\n", 
  RowBox[{
   RowBox[{"maxGrid", " ", "=", " ", 
    RowBox[{"generateMaxHeightGrid", "[", "dim", "]"}]}], ";"}], "\n", 
@@ -4385,8 +4407,10 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"extendRandomLists", "[", "100000", "]"}], ";"}]}], "Code",
  CellChangeTimes->{{3.9062072169837313`*^9, 3.906207285338469*^9}, 
-   3.906208268745075*^9, {3.90620838176483*^9, 3.906208383134509*^9}},
- CellLabel->"In[78]:=",ExpressionUUID->"b1013cb5-c10d-42f9-8d54-7dfbb7396314"],
+   3.906208268745075*^9, {3.90620838176483*^9, 3.906208383134509*^9}, {
+   3.907226007572801*^9, 3.9072260083644447`*^9}},
+ CellLabel->
+  "In[182]:=",ExpressionUUID->"b1013cb5-c10d-42f9-8d54-7dfbb7396314"],
 
 Cell[CellGroupData[{
 
@@ -6413,26 +6437,28 @@ Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"startChain", "[", 
-  RowBox[{"21", ",", " ", "500000"}], "]"}]], "Code",
+  RowBox[{"15", ",", " ", "50000"}], "]"}]], "Code",
  CellChangeTimes->{{3.9063159738417673`*^9, 3.906315998212283*^9}, 
-   3.907215853740334*^9},
+   3.907215853740334*^9, {3.907225950604105*^9, 3.907225951993981*^9}, {
+   3.9072260151679783`*^9, 3.907226015402697*^9}},
  CellLabel->
-  "In[158]:=",ExpressionUUID->"0b6cc787-dcb9-4e33-a5db-df9d319ab59d"],
+  "In[200]:=",ExpressionUUID->"0b6cc787-dcb9-4e33-a5db-df9d319ab59d"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"Running for \"\>", "\[InvisibleSpace]", "500000", 
+  RowBox[{"\<\"Running for \"\>", "\[InvisibleSpace]", "50000", 
    "\[InvisibleSpace]", "\<\" steps...\"\>"}],
-  SequenceForm["Running for ", 500000, " steps..."],
+  SequenceForm["Running for ", 50000, " steps..."],
   Editable->False]], "Print",
  CellChangeTimes->{3.9063160014061747`*^9, 3.907215871143468*^9, 
   3.9072159994542503`*^9, 3.907224317399618*^9, 3.90722448439631*^9, 
-  3.907224778287325*^9},
+  3.907224778287325*^9, 3.907225954883401*^9, 3.9072260175813017`*^9, 
+  3.907226196777005*^9},
  CellLabel->
   "During evaluation of \
-In[158]:=",ExpressionUUID->"26c50990-74c2-43a9-aac9-22fea5f0e74f"],
+In[200]:=",ExpressionUUID->"2b784148-ecb6-4b94-8b80-672268956048"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -6442,27 +6468,61 @@ Cell[BoxData[
   Editable->False]], "Print",
  CellChangeTimes->{3.9063160014061747`*^9, 3.907215871143468*^9, 
   3.9072159994542503`*^9, 3.907224317399618*^9, 3.90722448439631*^9, 
-  3.907224778290689*^9},
+  3.907224778287325*^9, 3.907225954883401*^9, 3.9072260175813017`*^9, 
+  3.907226196778523*^9},
  CellLabel->
   "During evaluation of \
-In[158]:=",ExpressionUUID->"620e3fe9-003c-4797-8ad7-2ed2a4920940"],
+In[200]:=",ExpressionUUID->"a85d1474-d849-4c70-b92e-d294df2fb51b"],
+
+Cell[BoxData["\<\"The process should terminate now.\"\>"], "Print",
+ CellChangeTimes->{3.9063160014061747`*^9, 3.907215871143468*^9, 
+  3.9072159994542503`*^9, 3.907224317399618*^9, 3.90722448439631*^9, 
+  3.907224778287325*^9, 3.907225954883401*^9, 3.9072260175813017`*^9, 
+  3.907226216211536*^9},
+ CellLabel->
+  "During evaluation of \
+In[200]:=",ExpressionUUID->"4fbc50ec-558d-4914-8884-b49134f7dd26"],
 
 Cell[BoxData[
- DynamicBox[ToBoxes[
-   Grid[{{
-     "Current step: " <> ToString[$CellContext`tempStepNumber$1669755]}, {
-     "Height difference: " <> 
-      ToString[$CellContext`tempHeightDifference$1669755]}, {
-      $CellContext`displayGrids[$CellContext`tempMaxGrid$1669755, \
-$CellContext`tempMinGrid$1669755, $CellContext`blueColourRules]}}], 
-   StandardForm],
-  Evaluator->"Local",
-  ImageSizeCache->{
-   402., {311.46750000000003`, 317.09250000000003`}}]], "PrintTemporary",
- CellChangeTimes->{3.907224778308427*^9},
+ InterpretationBox[
+  RowBox[{"\<\"-- The height difference after \"\>", "\[InvisibleSpace]", 
+   "39782", "\[InvisibleSpace]", "\<\" steps was \"\>", "\[InvisibleSpace]", 
+   "0", "\[InvisibleSpace]", "\<\".\"\>"}],
+  SequenceForm[
+  "-- The height difference after ", 39782, " steps was ", 0, "."],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9063160014061747`*^9, 3.907215871143468*^9, 
+  3.9072159994542503`*^9, 3.907224317399618*^9, 3.90722448439631*^9, 
+  3.907224778287325*^9, 3.907225954883401*^9, 3.9072260175813017`*^9, 
+  3.907226216231029*^9},
  CellLabel->
   "During evaluation of \
-In[158]:=",ExpressionUUID->"ed5b12f3-034f-4a46-b839-f8e485c65082"]
+In[200]:=",ExpressionUUID->"c8da8aa5-9dab-42ce-9b84-0a51008b9267"],
+
+Cell[BoxData["1"], "Print",
+ CellChangeTimes->{3.9063160014061747`*^9, 3.907215871143468*^9, 
+  3.9072159994542503`*^9, 3.907224317399618*^9, 3.90722448439631*^9, 
+  3.907224778287325*^9, 3.907225954883401*^9, 3.9072260175813017`*^9, 
+  3.9072262162326612`*^9},
+ CellLabel->
+  "During evaluation of \
+In[200]:=",ExpressionUUID->"e1e7b81d-1a90-4e8c-ab87-45f129385d75"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The chain took \"\>", "\[InvisibleSpace]", "50000", 
+   "\[InvisibleSpace]", "\<\" steps to converge. Here are the results:\"\>"}],
+  
+  SequenceForm[
+  "The chain took ", 50000, " steps to converge. Here are the results:"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9063160014061747`*^9, 3.907215871143468*^9, 
+  3.9072159994542503`*^9, 3.907224317399618*^9, 3.90722448439631*^9, 
+  3.907224778287325*^9, 3.907225954883401*^9, 3.9072260175813017`*^9, 
+  3.907226216234117*^9},
+ CellLabel->
+  "During evaluation of \
+In[200]:=",ExpressionUUID->"01139694-bb9f-470f-9fd3-e1938e9202df"]
 }, Open  ]]
 }, Open  ]],
 
@@ -7740,87 +7800,90 @@ Cell[28838, 748, 133812, 2191, 605, "Output",ExpressionUUID->"8239e021-501a-4405
 Cell[162665, 2942, 244, 4, 35, "Text",ExpressionUUID->"838ed675-18b6-471f-87c6-8e111749f395"],
 Cell[CellGroupData[{
 Cell[162934, 2950, 7631, 192, 648, "Code",ExpressionUUID->"6c781b18-8496-4136-8407-0bc2cea9ec39"],
-Cell[170568, 3144, 2148, 41, 308, "Output",ExpressionUUID->"e825614a-ffca-4189-bdf2-c437b95f6cbd"]
+Cell[170568, 3144, 2147, 41, 308, "Output",ExpressionUUID->"e825614a-ffca-4189-bdf2-c437b95f6cbd"]
 }, Open  ]],
-Cell[172731, 3188, 21675, 517, 2013, "Code",ExpressionUUID->"26a7099b-d8c0-45e4-aea9-5dfb5beb1f6b"],
-Cell[194409, 3707, 213, 9, 124, "Text",ExpressionUUID->"9bee187d-e51f-4545-9b66-7d53566249a6"],
+Cell[172730, 3188, 22920, 539, 2130, "Code",ExpressionUUID->"26a7099b-d8c0-45e4-aea9-5dfb5beb1f6b"],
+Cell[195653, 3729, 213, 9, 124, "Text",ExpressionUUID->"9bee187d-e51f-4545-9b66-7d53566249a6"],
 Cell[CellGroupData[{
-Cell[194647, 3720, 3118, 78, 344, "Code",ExpressionUUID->"1853123a-5fe1-4d29-8057-a868494262bd"],
-Cell[197768, 3800, 2206, 51, 183, "Output",ExpressionUUID->"ab6d9fd8-fedc-486f-b66c-b0433927ca7e"],
-Cell[199977, 3853, 2206, 51, 183, "Output",ExpressionUUID->"3a385291-4fed-46b1-ae7a-0b79f349e9d0"],
-Cell[202186, 3906, 2208, 51, 183, "Output",ExpressionUUID->"cc20ffe1-2280-47ba-8e34-a698155c6199"],
-Cell[204397, 3959, 2204, 51, 183, "Output",ExpressionUUID->"bbd72613-7916-4518-8762-1bb6467711ac"],
-Cell[206604, 4012, 4869, 162, 183, "Output",ExpressionUUID->"1fe22a5d-f922-4fc6-9861-0e2973ec181c"]
+Cell[195891, 3742, 3118, 78, 344, "Code",ExpressionUUID->"1853123a-5fe1-4d29-8057-a868494262bd"],
+Cell[199012, 3822, 2206, 51, 183, "Output",ExpressionUUID->"ab6d9fd8-fedc-486f-b66c-b0433927ca7e"],
+Cell[201221, 3875, 2206, 51, 183, "Output",ExpressionUUID->"3a385291-4fed-46b1-ae7a-0b79f349e9d0"],
+Cell[203430, 3928, 2208, 51, 183, "Output",ExpressionUUID->"cc20ffe1-2280-47ba-8e34-a698155c6199"],
+Cell[205641, 3981, 2204, 51, 183, "Output",ExpressionUUID->"bbd72613-7916-4518-8762-1bb6467711ac"],
+Cell[207848, 4034, 4869, 162, 183, "Output",ExpressionUUID->"1fe22a5d-f922-4fc6-9861-0e2973ec181c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[211510, 4179, 1337, 34, 250, "Code",ExpressionUUID->"cbcb5368-faac-41c4-95b2-57026a030aec"],
+Cell[212754, 4201, 1337, 34, 250, "Code",ExpressionUUID->"cbcb5368-faac-41c4-95b2-57026a030aec"],
 Cell[CellGroupData[{
-Cell[212872, 4217, 1788, 46, 47, "Print",ExpressionUUID->"8485fc6c-096d-4d41-b87a-66c62a15172d"],
-Cell[214663, 4265, 2923, 72, 68, "Print",ExpressionUUID->"08b1aaf7-dc0e-40a5-8405-0ef45161f995"]
+Cell[214116, 4239, 1788, 46, 47, "Print",ExpressionUUID->"8485fc6c-096d-4d41-b87a-66c62a15172d"],
+Cell[215907, 4287, 2923, 72, 68, "Print",ExpressionUUID->"08b1aaf7-dc0e-40a5-8405-0ef45161f995"]
 }, Open  ]]
 }, Open  ]],
-Cell[217613, 4341, 1898, 26, 38, "Code",ExpressionUUID->"4906f281-002d-4a28-ba03-39d30741f424"],
-Cell[219514, 4369, 785, 19, 156, "Code",ExpressionUUID->"b1013cb5-c10d-42f9-8d54-7dfbb7396314"],
+Cell[218857, 4363, 1898, 26, 38, "Code",ExpressionUUID->"4906f281-002d-4a28-ba03-39d30741f424"],
+Cell[220758, 4391, 841, 21, 156, "Code",ExpressionUUID->"b1013cb5-c10d-42f9-8d54-7dfbb7396314"],
 Cell[CellGroupData[{
-Cell[220324, 4392, 213, 4, 38, "Code",ExpressionUUID->"85ae952a-62ab-4be9-8d0f-070669f74024"],
+Cell[221624, 4416, 213, 4, 38, "Code",ExpressionUUID->"85ae952a-62ab-4be9-8d0f-070669f74024"],
 Cell[CellGroupData[{
-Cell[220562, 4400, 556, 12, 25, "Print",ExpressionUUID->"db3a1d43-2a00-464a-b8f3-19097c7757e1"],
-Cell[221121, 4414, 591, 15, 25, "Print",ExpressionUUID->"7f8c49ba-12ba-4fa3-9942-8992eb84e52a"]
+Cell[221862, 4424, 556, 12, 25, "Print",ExpressionUUID->"db3a1d43-2a00-464a-b8f3-19097c7757e1"],
+Cell[222421, 4438, 591, 15, 25, "Print",ExpressionUUID->"7f8c49ba-12ba-4fa3-9942-8992eb84e52a"]
 }, Open  ]],
-Cell[221727, 4432, 153, 3, 46, "Output",ExpressionUUID->"02fe8ba2-fa99-499c-8c17-99de51f2a5b2"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[221917, 4440, 287, 6, 38, "Code",ExpressionUUID->"900a5bb4-4352-452e-a7da-70a8ba2a9c0d"],
-Cell[222207, 4448, 5398, 127, 431, "Output",ExpressionUUID->"dcce5bea-ddd4-41be-a8e2-836ad0bb6f79"]
+Cell[223027, 4456, 153, 3, 46, "Output",ExpressionUUID->"02fe8ba2-fa99-499c-8c17-99de51f2a5b2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[227642, 4580, 444, 9, 38, "Code",ExpressionUUID->"1c8eeaa0-0eff-4a55-8570-87f764c53467"],
-Cell[228089, 4591, 105615, 1790, 628, "Output",ExpressionUUID->"b9ecfc89-edf8-42c1-811e-685fa8af3856"]
+Cell[223217, 4464, 287, 6, 38, "Code",ExpressionUUID->"900a5bb4-4352-452e-a7da-70a8ba2a9c0d"],
+Cell[223507, 4472, 5398, 127, 431, "Output",ExpressionUUID->"dcce5bea-ddd4-41be-a8e2-836ad0bb6f79"]
 }, Open  ]],
-Cell[333719, 6384, 531, 11, 124, "Text",ExpressionUUID->"46a3a831-0d98-43c5-ad74-c16d7ad6fa55"],
-Cell[334253, 6397, 839, 12, 38, "Code",ExpressionUUID->"f91f1a45-a903-4f9e-af7c-0583d4bd6680"],
 Cell[CellGroupData[{
-Cell[335117, 6413, 273, 6, 38, "Code",ExpressionUUID->"0b6cc787-dcb9-4e33-a5db-df9d319ab59d"],
+Cell[228942, 4604, 444, 9, 38, "Code",ExpressionUUID->"1c8eeaa0-0eff-4a55-8570-87f764c53467"],
+Cell[229389, 4615, 105615, 1790, 628, "Output",ExpressionUUID->"b9ecfc89-edf8-42c1-811e-685fa8af3856"]
+}, Open  ]],
+Cell[335019, 6408, 531, 11, 124, "Text",ExpressionUUID->"46a3a831-0d98-43c5-ad74-c16d7ad6fa55"],
+Cell[335553, 6421, 839, 12, 38, "Code",ExpressionUUID->"f91f1a45-a903-4f9e-af7c-0583d4bd6680"],
 Cell[CellGroupData[{
-Cell[335415, 6423, 496, 11, 25, "Print",ExpressionUUID->"26c50990-74c2-43a9-aac9-22fea5f0e74f"],
-Cell[335914, 6436, 492, 11, 25, "Print",ExpressionUUID->"620e3fe9-003c-4797-8ad7-2ed2a4920940"],
-Cell[336409, 6449, 632, 15, 639, "PrintTemporary",ExpressionUUID->"ed5b12f3-034f-4a46-b839-f8e485c65082"]
+Cell[336417, 6437, 370, 7, 38, "Code",ExpressionUUID->"0b6cc787-dcb9-4e33-a5db-df9d319ab59d"],
+Cell[CellGroupData[{
+Cell[336812, 6448, 565, 12, 25, "Print",ExpressionUUID->"2b784148-ecb6-4b94-8b80-672268956048"],
+Cell[337380, 6462, 563, 12, 25, "Print",ExpressionUUID->"a85d1474-d849-4c70-b92e-d294df2fb51b"],
+Cell[337946, 6476, 405, 7, 25, "Print",ExpressionUUID->"4fbc50ec-558d-4914-8884-b49134f7dd26"],
+Cell[338354, 6485, 682, 14, 25, "Print",ExpressionUUID->"c8da8aa5-9dab-42ce-9b84-0a51008b9267"],
+Cell[339039, 6501, 367, 7, 25, "Print",ExpressionUUID->"e1e7b81d-1a90-4e8c-ab87-45f129385d75"],
+Cell[339409, 6510, 641, 14, 25, "Print",ExpressionUUID->"01139694-bb9f-470f-9fd3-e1938e9202df"]
 }, Open  ]]
 }, Open  ]],
-Cell[337068, 6468, 428, 10, 38, "Code",ExpressionUUID->"ab4f3c93-b88d-4261-aa50-ed3b4033f205"],
+Cell[340077, 6528, 428, 10, 38, "Code",ExpressionUUID->"ab4f3c93-b88d-4261-aa50-ed3b4033f205"],
 Cell[CellGroupData[{
-Cell[337521, 6482, 1028, 23, 203, "Code",ExpressionUUID->"211c89a6-5f74-4d95-9cb4-1483bfd6d2ff"],
-Cell[338552, 6507, 3286, 60, 437, "Output",ExpressionUUID->"9ef088cf-4603-450e-83da-6a298a6c525a"],
-Cell[341841, 6569, 1287, 28, 422, "Output",ExpressionUUID->"0df22133-acbc-4b62-b4ac-9ea5883404ba"],
-Cell[343131, 6599, 1287, 28, 422, "Output",ExpressionUUID->"3876e899-e5d9-4d5a-bcd0-5126a0df681a"],
-Cell[344421, 6629, 1515, 32, 422, "Output",ExpressionUUID->"1e194457-28b1-42fc-9b06-27e5e7320049"]
+Cell[340530, 6542, 1028, 23, 203, "Code",ExpressionUUID->"211c89a6-5f74-4d95-9cb4-1483bfd6d2ff"],
+Cell[341561, 6567, 3286, 60, 437, "Output",ExpressionUUID->"9ef088cf-4603-450e-83da-6a298a6c525a"],
+Cell[344850, 6629, 1287, 28, 422, "Output",ExpressionUUID->"0df22133-acbc-4b62-b4ac-9ea5883404ba"],
+Cell[346140, 6659, 1287, 28, 422, "Output",ExpressionUUID->"3876e899-e5d9-4d5a-bcd0-5126a0df681a"],
+Cell[347430, 6689, 1515, 32, 422, "Output",ExpressionUUID->"1e194457-28b1-42fc-9b06-27e5e7320049"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[345973, 6666, 264, 5, 38, "Code",ExpressionUUID->"996ce040-d2ea-4f64-952e-0c4dac0dcef1"],
-Cell[346240, 6673, 3215, 59, 437, "Output",ExpressionUUID->"cf0dee7f-bfdf-4dbe-a8ee-98e4c6aacaec"]
+Cell[348982, 6726, 264, 5, 38, "Code",ExpressionUUID->"996ce040-d2ea-4f64-952e-0c4dac0dcef1"],
+Cell[349249, 6733, 3215, 59, 437, "Output",ExpressionUUID->"cf0dee7f-bfdf-4dbe-a8ee-98e4c6aacaec"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[349492, 6737, 467, 11, 38, "Code",ExpressionUUID->"015315b5-3fcd-4ed4-aed7-dfcb0a72f56e"],
-Cell[349962, 6750, 12706, 262, 536, "Output",ExpressionUUID->"cc2f9061-92d5-4cc2-8d2a-190cd9b9f066"]
+Cell[352501, 6797, 467, 11, 38, "Code",ExpressionUUID->"015315b5-3fcd-4ed4-aed7-dfcb0a72f56e"],
+Cell[352971, 6810, 12706, 262, 536, "Output",ExpressionUUID->"cc2f9061-92d5-4cc2-8d2a-190cd9b9f066"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[362705, 7017, 542, 12, 86, "Code",ExpressionUUID->"0c96f461-f771-48ea-9bbd-7e5cc80c654c"],
-Cell[363250, 7031, 1097, 26, 419, "Output",ExpressionUUID->"5a310d22-3bab-4005-a65a-62c5bb36fb59"],
-Cell[364350, 7059, 1071, 26, 419, "Output",ExpressionUUID->"cec27424-07d0-414b-99f4-26bb27b5fa9e"]
+Cell[365714, 7077, 542, 12, 86, "Code",ExpressionUUID->"0c96f461-f771-48ea-9bbd-7e5cc80c654c"],
+Cell[366259, 7091, 1097, 26, 419, "Output",ExpressionUUID->"5a310d22-3bab-4005-a65a-62c5bb36fb59"],
+Cell[367359, 7119, 1071, 26, 419, "Output",ExpressionUUID->"cec27424-07d0-414b-99f4-26bb27b5fa9e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[365458, 7090, 219, 4, 38, "Code",ExpressionUUID->"216416a7-00b4-4f81-806d-59bbe717674d"],
-Cell[365680, 7096, 3042, 59, 434, "Output",ExpressionUUID->"11665630-1968-491e-800e-e76de603f948"]
+Cell[368467, 7150, 219, 4, 38, "Code",ExpressionUUID->"216416a7-00b4-4f81-806d-59bbe717674d"],
+Cell[368689, 7156, 3042, 59, 434, "Output",ExpressionUUID->"11665630-1968-491e-800e-e76de603f948"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[368759, 7160, 268, 5, 62, "Code",ExpressionUUID->"d3e7e106-bfd0-4ae2-9b1d-80b095b0ec3c"],
-Cell[369030, 7167, 3278, 59, 434, "Output",ExpressionUUID->"7a59d556-fe02-43ab-9036-847d01d8867f"],
-Cell[372311, 7228, 3274, 59, 434, "Output",ExpressionUUID->"72ede9cd-f089-4dd9-a7f2-9fc38150b59a"]
+Cell[371768, 7220, 268, 5, 62, "Code",ExpressionUUID->"d3e7e106-bfd0-4ae2-9b1d-80b095b0ec3c"],
+Cell[372039, 7227, 3278, 59, 434, "Output",ExpressionUUID->"7a59d556-fe02-43ab-9036-847d01d8867f"],
+Cell[375320, 7288, 3274, 59, 434, "Output",ExpressionUUID->"72ede9cd-f089-4dd9-a7f2-9fc38150b59a"]
 }, Open  ]],
-Cell[375600, 7290, 175, 4, 38, "Code",ExpressionUUID->"4e8b5fb5-c5b5-4c75-b1f8-c05ba77e8c93"],
+Cell[378609, 7350, 175, 4, 38, "Code",ExpressionUUID->"4e8b5fb5-c5b5-4c75-b1f8-c05ba77e8c93"],
 Cell[CellGroupData[{
-Cell[375800, 7298, 262, 5, 38, "Code",ExpressionUUID->"9f7d3fd1-a804-4ddc-bd35-1e5a57f9e0bf"],
-Cell[376065, 7305, 155, 3, 46, "Output",ExpressionUUID->"5b746c21-ed0e-47c9-ac7f-f45db8e3c228"]
+Cell[378809, 7358, 262, 5, 38, "Code",ExpressionUUID->"9f7d3fd1-a804-4ddc-bd35-1e5a57f9e0bf"],
+Cell[379074, 7365, 155, 3, 46, "Output",ExpressionUUID->"5b746c21-ed0e-47c9-ac7f-f45db8e3c228"]
 }, Open  ]]
 }
 ]
